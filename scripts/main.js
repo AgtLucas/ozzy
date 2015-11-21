@@ -61,7 +61,7 @@ var Fish = React.createClass({
         <img src={details.image} alt={details.name} />
         <h3 className="fish-name">
           {details.name}
-          <span className="price">{details.price}</span>
+          <span className="price">{h.formatPrice(details.price)}</span>
         </h3>
         <p>{details.desc}</p>
       </li>
