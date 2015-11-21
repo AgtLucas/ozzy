@@ -30,7 +30,7 @@ var Header = React.createClass({
             <span className="the">the</span>
           </span>
           Day</h1>
-        <h3>{this.props.tagline}</h3>
+        <h3 className="tagline"><span>{this.props.tagline}</span></h3>
       </header>
     );
   }
