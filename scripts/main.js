@@ -7,6 +7,10 @@ var Navigation = ReactRouter.Navigation;
 var History = ReactRouter.History;
 var createBrowserHistory = require('history/lib/createBrowserHistory');
 var h = require('./helpers');
+var Rebase = require('re-base');
+
+// Firebase
+var base = Rebase.createClass('https://le-fish-market.firebaseio.com/');
 
 /* App */
 var App = React.createClass({
@@ -16,6 +20,13 @@ var App = React.createClass({
       fishes: {},
       order: {}
     }
+  },
+
+  componentDidMount: function() {
+    base.syncState(this.props.params.storeId + '/fishes', {
+      context: this,
+      state: 'fishes'
+    });
   },
 
   addToOrder: function(key) {
