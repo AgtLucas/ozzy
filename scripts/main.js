@@ -190,7 +190,7 @@ var Order = React.createClass({
 
     return(
       <li key={key}>
-        <CSSTransitionGroup component="span" transitionName="count" transitionLeaveTimeout={250} transitionEnterTimeout={250}>
+        <CSSTransitionGroup component="span" transitionName="count" transitionLeaveTimeout={250} transitionEnterTimeout={250} className="count">
           <span key={key}>{count}</span>
         </CSSTransitionGroup>
         lbs {fish.name} {removeButton}
