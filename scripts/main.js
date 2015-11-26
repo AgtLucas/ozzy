@@ -161,6 +161,10 @@ var AddFishForm = React.createClass({
 
 /* Header */
 var Header = React.createClass({
+  propTypes: {
+    tagline: React.PropTypes.string.isRequired
+  },
+
   render: function() {
     return(
       <header className="top">
