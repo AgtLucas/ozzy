@@ -1,3 +1,5 @@
+import React from 'react';
+
 /* Not found */
 var NotFound = React.createClass({
   render: function() {
@@ -6,3 +8,5 @@ var NotFound = React.createClass({
     );
   }
 });
+
+export default NotFound;
