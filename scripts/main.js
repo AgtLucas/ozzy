@@ -13,6 +13,8 @@ var Catalyst = require('react-catalyst');
 // Firebase
 var base = Rebase.createClass('https://le-fish-market.firebaseio.com/');
 
+import NotFound from './components/NotFound';
+
 /* App */
 var App = React.createClass({
 
@@ -306,15 +308,6 @@ var StorePicker = React.createClass({
     );
   }
 
-});
-
-/* Not found */
-var NotFound = React.createClass({
-  render: function() {
-    return(
-      <h1>Not Found!</h1>
-    );
-  }
 });
 
 /* Routes */
