@@ -14,6 +14,7 @@ var Catalyst = require('react-catalyst');
 var base = Rebase.createClass('https://le-fish-market.firebaseio.com/');
 
 import NotFound from './components/NotFound';
+import StorePicker from './components/StorePicker';
 
 /* App */
 var App = React.createClass({
@@ -284,30 +285,6 @@ var Inventory = React.createClass({
       </div>
     );
   }
-});
-
-/* StorePicker */
-var StorePicker = React.createClass({
-
-  mixins: [History],
-
-  gotToStore: function(event) {
-    event.preventDefault();
-    var storeId = this.refs.storeId.value;
-    this.history.pushState(null, '/store/' + storeId);
-  },
-
-  render: function() {
-
-    return(
-      <form className="store-selector" onSubmit={this.gotToStore}>
-        <h2>Please enter a store</h2>
-        <input type="text" ref="storeId" defaultValue={h.getFunName()} required />
-        <input type="submit" />
-      </form>
-    );
-  }
-
 });
 
 /* Routes */
