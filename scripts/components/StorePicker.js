@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 /* StorePicker */
 var StorePicker = React.createClass({
@@ -6,9 +6,9 @@ var StorePicker = React.createClass({
   mixins: [History],
 
   gotToStore: function(event) {
-    event.preventDefault();
-    var storeId = this.refs.storeId.value;
-    this.history.pushState(null, '/store/' + storeId);
+    event.preventDefault()
+    var storeId = this.refs.storeId.value
+    this.history.pushState(null, '/store/' + storeId)
   },
 
   render: function() {
@@ -19,7 +19,7 @@ var StorePicker = React.createClass({
         <input type="text" ref="storeId" defaultValue={h.getFunName()} required />
         <input type="submit" />
       </form>
-    );
+    )
   }
 
-});
+})
