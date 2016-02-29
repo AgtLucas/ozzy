@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 /* Inventory */
 var Inventory = React.createClass({
@@ -12,7 +12,7 @@ var Inventory = React.createClass({
   },
 
   renderInventory: function(key) {
-    var linkState = this.props.linkState;
+    var linkState = this.props.linkState
     return(
       <div className="fish-edit" key={key}>
         <input type="text" valueLink={linkState('fishes.'+ key +'.name')} />
@@ -25,7 +25,7 @@ var Inventory = React.createClass({
         <input type="text" valueLink={linkState('fishes.'+ key +'.image')} />
         <button onClick={this.props.removeFish.bind(null, key)}>Remove Fish</button>
       </div>
-    );
+    )
   },
 
   render: function() {
@@ -36,6 +36,6 @@ var Inventory = React.createClass({
         <AddFishForm {...this.props} />
         <button onClick={this.props.loadSamples}>Load Sample Fishes</button>
       </div>
-    );
+    )
   }
-});
+})
